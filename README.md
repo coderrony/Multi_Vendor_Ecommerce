@@ -3,7 +3,7 @@ Project <b> Live <a href="https://elearningproject.pythonanywhere.com/" target="
 <p>Website interface</p>
 
 ## User Dashboard
-<img src="https://i.postimg.cc/XNTtNK9K/Screenshot-27.png" width="600" height="300">
+<img src="https://i.postimg.cc/52ZXnRzY/Screenshot-28.png" width="600" height="300">
 
 ## Vendor Dashboard
 <img src="https://i.postimg.cc/XYnHXsq5/Screenshot-26.png" width="600" height="300">
