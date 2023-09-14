@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block vendorTitle %}{% endblock vendorTitle %} </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "dashboard/dashboard.css" %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-4"><i>Vendor Dashboard</i></h1>
+        <div class="row mt-3">
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+                <!-- Exaple 1 -->
+                <div class="card ">
+
+                    <div class="list-group text-center">
+
+                        <a href="{% url "dashboard" %}" class="list-group-item ">
+                            <i class="fa-solid fa-gauge mx-1"></i>
+                            Dashboard
+                        </a>
+
+                        <a href="{% url "vendorAddProduct" %}" class="list-group-item"><i
+                                class="fa-brands fa-product-hunt mx-2"></i>Product</a>
+
+                        <a href="{% url "vendorOrders" %}" class="list-group-item "><i
+                                class="fa-solid fa-cart-shopping mx-2"></i>Orders</a>
+
+                        <a href="{% url "withdrawBalance" %}" class="list-group-item "><i
+                                class="fa-solid fa-download mx-2"></i>Withdraw</a>
+
+
+
+
+                        <a class="text-decoration-none text-dark p-2 list-group-item " type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear mx-2"></i>
+                            Settings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{% url "profile" %}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url "logout" %}">Logout</a></li>
+                        </ul>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-10">
+                <div class=" example-1 scrollbar-ripe-malinka">
+                    <div id="cartItem">
+                        <div class="row ">
+                            {% block contentBlock %}
+                            {% endblock contentBlock %}
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

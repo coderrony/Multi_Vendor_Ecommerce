@@ -1,0 +1,30 @@
+{% extends 'dashboard.html' %}
+{% load crispy_forms_tags %}
+{% block vendorTitle  %}Withdraw{% endblock vendorTitle  %}
+
+
+{% block contentBlock %}
+
+
+<div class="col-12 p-4">
+
+
+    <div class="card w-50 mx-auto">
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item text-center">
+                <h5>Available Withdraw </h5>
+                <h6> <i class="fa-solid fa-bangladeshi-taka-sign"></i> {{earning}}</b> <button
+                        class="btn btn-sm btn-warning mx-2">Cash
+                        Out</button> </p>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+
+{% endblock contentBlock %}

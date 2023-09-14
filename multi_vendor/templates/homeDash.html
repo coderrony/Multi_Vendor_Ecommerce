@@ -1,0 +1,32 @@
+{% extends 'dashboard.html' %}
+{% block vendorTitle  %}Vendor Dashboard{% endblock vendorTitle  %}
+
+
+{% block contentBlock %}
+
+<div class="col-12 ">
+
+    {{chart | safe}}
+
+</div>
+
+<div class="col-12 mb-3 text-center">
+
+
+    <div class="card w-50 mx-auto">
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">
+                <h5>Earning </h5>
+                <h6> <i class="fa-solid fa-bangladeshi-taka-sign"></i> {{earning}}</b></p>
+            </li>
+            <li class="list-group-item">
+                <h5>Order</h5>
+                <h6> {{total_order}}</b></p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+{% endblock contentBlock %}
